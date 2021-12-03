@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
+import '../widgets/custom_navigation_item.dart';
 
 class mainPage extends StatelessWidget {
   const mainPage({Key? key}) : super(key: key);
@@ -24,105 +25,18 @@ class mainPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_home.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kPrimeryColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  )
-                ],
+              CustomNavigationItem(
+                imageUrl: 'assets/icon_home.png',
+                isSelected: true,
               ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_transaction.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kTRanparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  )
-                ],
+              CustomNavigationItem(
+                imageUrl: 'assets/icon_transaction.png',
               ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_card.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kTRanparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  )
-                ],
+              CustomNavigationItem(
+                imageUrl: 'assets/icon_card.png',
               ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_settings.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color:kTRanparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  )
-                ],
+              CustomNavigationItem(
+                imageUrl: 'assets/icon_settings.png',
               ),
             ],
           ),
