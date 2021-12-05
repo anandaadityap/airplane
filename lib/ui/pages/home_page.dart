@@ -1,3 +1,4 @@
+import 'package:airplane/ui/widgets/destination_card.dart';
 import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
 
@@ -41,14 +42,15 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-                height: 60,
-                width: 60,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('assets/image_profile.png'),
-                  ),
-                ))
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/image_profile.png'),
+                ),
+              ),
+            )
           ],
         ),
       );
@@ -59,70 +61,42 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.only(
           top: 30,
         ),
-        child: Row(
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                left: defaultMargin,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              DestinationCard(
+                name: 'Lake Ciliwung',
+                city: 'Tangerang',
+                imageUrl: 'assets/image_destination1.png',
+                rating: 4.8,
               ),
-              padding: EdgeInsets.all(10),
-              width: 200,
-              height: 323,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(18),
-                color: kWhiteColor,
+              DestinationCard(
+                name: 'White House',
+                city: 'Spain',
+                imageUrl: 'assets/image_destination2.png',
+                rating: 4.7,
               ),
-              child: Column(
-                children: [
-                  Container(
-                    width: 180,
-                    height: 220,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      image: DecorationImage(
-                        image: AssetImage('assets/image_destination1.png'),
-                      ),
-                    ),
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Container(
-                        height: 30,
-                        width: 55,
-                        decoration: BoxDecoration(
-                          color: kWhiteColor,
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(18),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 18,
-                              height: 18,
-                              margin: EdgeInsets.only(right: 2),
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('assets/icon_Star.png'),
-                                ),
-                              ),
-                            ),
-                            Text(
-                              '4.8',
-                              style: blackTextStyle.copyWith(
-                                fontWeight: medium,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+              DestinationCard(
+                name: 'Hill Heyo',
+                city: 'Monaco',
+                imageUrl: 'assets/image_destination3.png',
+                rating: 4.8,
               ),
-            )
-          ],
+              DestinationCard(
+                name: 'Menarra',
+                city: 'Japan',
+                imageUrl: 'assets/image_destination4.png',
+                rating: 5.0,
+              ),
+              DestinationCard(
+                name: 'Payung Teduh',
+                city: 'Singapore',
+                imageUrl: 'assets/image_destination5.png',
+                rating: 4.8,
+              ),
+            ],
+          ),
         ),
       );
     }
