@@ -1,3 +1,5 @@
+import 'package:airplane/ui/widgets/interest_item.dart';
+import 'package:airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
 
@@ -143,11 +145,69 @@ class DetailPage extends StatelessWidget {
                   ),
                   Text(
                     'Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
-                    style: blackTextStyle.copyWith(height: 2.2),
+                    style: blackTextStyle.copyWith(height: 2),
+                  ),
+
+                  //NOTE: PHOTOS
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Photos',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo1.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo2.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo3.png',
+                      ),
+                    ],
+                  ),
+
+                  // NOTE: INTEREST
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Interests',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      InterestsItem(text: 'Kids Park'),
+                      InterestsItem(text: 'Honor Bridge'),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      InterestsItem(text: 'City Museum'),
+                      InterestsItem(text: 'Central Mall'),
+                    ],
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       );
@@ -155,8 +215,16 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(
-        children: [backgroundImage(), customShadow(), content()],
+      body: ListView(
+        children: [
+          Stack(
+            children: [
+              backgroundImage(),
+              customShadow(),
+              content(),
+            ],
+          ),
+        ],
       ),
     );
   }
