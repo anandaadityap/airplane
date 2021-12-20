@@ -1,4 +1,7 @@
 import 'package:airplane/ui/pages/home_page.dart';
+import 'package:airplane/ui/pages/setting_page.dart';
+import 'package:airplane/ui/pages/transaction_page.dart';
+import 'package:airplane/ui/pages/wallet_page.dart';
 import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
 import '../widgets/custom_navigation_item.dart';
@@ -9,7 +12,7 @@ class mainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget buildContent() {
-      return HomePage();
+      return SettingPage();
     }
 
     Widget customBottomNavigation() {
@@ -51,10 +54,12 @@ class mainPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(children: [
-        buildContent(),
-        customBottomNavigation(),
-      ]),
+      body: Stack(
+        children: [
+          buildContent(),
+          customBottomNavigation(),
+        ],
+      ),
     );
   }
 }
