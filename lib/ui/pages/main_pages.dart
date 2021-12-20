@@ -12,7 +12,7 @@ class mainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget buildContent() {
-      return SettingPage();
+      return HomePage();
     }
 
     Widget customBottomNavigation() {
