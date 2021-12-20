@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "349684234281",
+    "project_id": "airplane-400d7",
+    "storage_bucket": "airplane-400d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349684234281:android:d1fb608d8aa3efbf7b4438",
+        "android_client_info": {
+          "package_name": "com.ananda.airplane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349684234281-3ls9p5b3249sih0b4ltpf9d3p8ib77a9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCakUCv0U9uPZUkQoEJnSXkAlItJt0Wi_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349684234281-3ls9p5b3249sih0b4ltpf9d3p8ib77a9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
