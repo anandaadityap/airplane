@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:airplane/models/user_model.dart';
 import 'package:airplane/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,6 +26,14 @@ class AuthService {
       await UserService().setUSer(user);
 
       return user;
+    } catch (e) {
+      throw e;
+    }
+  }
+
+  Future<void> signOut() async {
+    try {
+      await _auth.signOut();
     } catch (e) {
       throw e;
     }

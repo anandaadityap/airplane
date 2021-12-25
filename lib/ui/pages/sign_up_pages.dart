@@ -8,10 +8,11 @@ import '../../../shared/theme.dart';
 class signUpPage extends StatelessWidget {
   signUpPage({Key? key}) : super(key: key);
 
-  TextEditingController nameConroller = TextEditingController(text: '');
-  TextEditingController emailConroller = TextEditingController(text: '');
-  TextEditingController passwordConroller = TextEditingController(text: '');
-  TextEditingController hobbyConroller = TextEditingController(text: '');
+  final TextEditingController nameConroller = TextEditingController(text: '');
+  final TextEditingController emailConroller = TextEditingController(text: '');
+  final TextEditingController passwordConroller =
+      TextEditingController(text: '');
+  final TextEditingController hobbyConroller = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
