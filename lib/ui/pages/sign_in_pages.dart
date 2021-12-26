@@ -8,11 +8,9 @@ import '../../../shared/theme.dart';
 class signInPage extends StatelessWidget {
   signInPage({Key? key}) : super(key: key);
 
-  final TextEditingController nameConroller = TextEditingController(text: '');
   final TextEditingController emailConroller = TextEditingController(text: '');
   final TextEditingController passwordConroller =
       TextEditingController(text: '');
-  final TextEditingController hobbyConroller = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +50,7 @@ class signInPage extends StatelessWidget {
           listener: (context, state) {
             if (state is AuthSuccess) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/bonus', (route) => false);
+                  context, '/main', (route) => false);
             } else if (state is AuthFailed) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -68,15 +66,13 @@ class signInPage extends StatelessWidget {
                 child: CircularProgressIndicator(),
               );
             }
-
             return CustomButton(
               title: 'Sign In',
               onPressed: () {
-                context.read<AuthCubit>().signUp(
-                    email: emailConroller.text,
-                    password: passwordConroller.text,
-                    name: nameConroller.text,
-                    hobby: hobbyConroller.text);
+                context.read<AuthCubit>().signIn(
+                      email: emailConroller.text,
+                      password: passwordConroller.text,
+                    );
               },
             );
           },
@@ -106,7 +102,7 @@ class signInPage extends StatelessWidget {
     Widget tacButton() {
       return GestureDetector(
         onTap: () {
-          Navigator.pop(context);
+          Navigator.pushNamed(context, '/sign-up');
         },
         child: Container(
           alignment: Alignment.center,
