@@ -1,3 +1,4 @@
+import 'package:airplane/models/transaction_model.dart';
 import 'package:airplane/ui/pages/success_chekout_page.dart';
 import 'package:airplane/ui/widgets/booking_details_item.dart';
 import 'package:airplane/ui/widgets/custom_button.dart';
@@ -5,7 +6,9 @@ import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
 
 class CheckoutPage extends StatelessWidget {
-  const CheckoutPage({Key? key}) : super(key: key);
+  final TransactionModel transaction;
+
+  const CheckoutPage(this.transaction, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
