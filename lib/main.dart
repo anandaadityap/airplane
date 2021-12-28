@@ -9,6 +9,7 @@ import 'package:airplane/ui/pages/sign_in_pages.dart';
 import 'package:airplane/ui/pages/sign_up_pages.dart';
 import 'package:airplane/ui/pages/get_started_pages.dart';
 import 'package:airplane/ui/pages/splash_pages.dart';
+import 'package:airplane/ui/pages/success_chekout_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
           '/sign-in': (context) => signInPage(),
           '/bonus': (context) => BonusPages(),
           '/main': (context) => mainPage(),
+          '/success': (context) => SuccessChekoutPage(),
         },
       ),
     );

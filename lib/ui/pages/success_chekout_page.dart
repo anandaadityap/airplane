@@ -1,6 +1,8 @@
+import 'package:airplane/cubit/page_cubit.dart';
 import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../../shared/theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SuccessChekoutPage extends StatelessWidget {
   const SuccessChekoutPage({Key? key}) : super(key: key);
@@ -52,11 +54,8 @@ class SuccessChekoutPage extends StatelessWidget {
         width: 220,
         title: 'My Bookings',
         onPressed: () {
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            '/main',
-            (route) => false,
-          );
+          context.read<PageCubit>().setPage(1);
+          Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
         },
         margin: EdgeInsets.only(top: 50),
       );
