@@ -170,7 +170,7 @@ class CheckoutPage extends StatelessWidget {
             //NOTE : BOOKING DETAILS ITEM
             BookingDetailsItem(
               title: 'Traveler',
-              valueText: '${transaction.amountOfTraveller} Person',
+              valueText: '${transaction.amountOfTraveler} Person',
               valueColor: kBlackColor,
             ),
             BookingDetailsItem(
