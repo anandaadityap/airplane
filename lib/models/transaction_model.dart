@@ -27,7 +27,7 @@ class TransactionModel extends Equatable {
   factory TransactionModel.fromJson(String id, Map<String, dynamic> json) =>
       TransactionModel(
         destination: DestinationModel.fromJson(
-            json['destiation']['id'], json['destination']),
+            json['destination']['id'], json['destination']),
         id: id,
         amountOfTraveler: json['amountOfTraveler'],
         selectedSeats: json['selectedSeats'],
